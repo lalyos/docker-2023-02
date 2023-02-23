@@ -23,7 +23,7 @@ services:
     image: adminer:4.8.1
     restart: always
     environment:
-    - VIRTUAL_HOST=adminer.lvh.me
+    - VIRTUAL_HOST=adminer.${COMPOSE_PROJECT_NAME}.lvh.me
     ports:
       - 8080
 
