@@ -2,6 +2,7 @@ version: '3.9'
 services:
   coffee:
     image: lunch:v3
+    build: .
     ports:
     - 80
     environment:
