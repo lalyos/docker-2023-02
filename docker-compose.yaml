@@ -6,6 +6,9 @@ services:
       dockerfile: Dockerfile.alpine
     ports:
     - 80
+    labels:
+      - traefik.frontend.auth.basic=admin:$$1$$cL7ScHpi$$wnzxV75by07GKH45cPyMb1
+      - traefik.frontend.auth.basic=bela:$$1$$cL7ScHpi$$wnzxV75by07GKH45cPyMb1
     environment:
       - VIRTUAL_HOST=coffee.${COMPOSE_PROJECT_NAME}.lvh.me
       - TITLE=${TITLE:-Welcome}
