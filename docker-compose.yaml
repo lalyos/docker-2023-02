@@ -2,7 +2,8 @@ version: '3.9'
 services:
   coffee:
     image: lunch:v3
-    build: .
+    build:
+      dockerfile: Dockerfile.alpine
     ports:
     - 80
     environment:

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cat > /var/www/html/index.html <<EOF
+
+cat > /usr/share/nginx/html/index.html <<EOF
 <html>
 <body bgcolor="${COLOR:-gray}">
   <h1>${TITLE:-Welcome}</h1>

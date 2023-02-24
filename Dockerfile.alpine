@@ -1,0 +1,10 @@
+FROM nginx:1.23-alpine-slim
+
+RUN apk add \
+  bash \
+  curl
+
+COPY start.sh /
+RUN chmod +x /start.sh
+CMD [ "/start.sh" ]
+EXPOSE 80
